@@ -1,15 +1,19 @@
-import { Text, View } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
+import { WTextStories } from "../components/WText/WText.stories";
+import { theme } from "../theme/theme";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <ScrollView contentContainerStyle={styles.contentContainer}>
+      <WTextStories />
+    </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  contentContainer: {
+    flexGrow: 1,
+    gap: theme.spacing.m,
+    padding: theme.spacing.m,
+  },
+});

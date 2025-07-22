@@ -1,0 +1,39 @@
+export const theme = {
+  colors: {
+    primary: "#000000",
+    secondary: "#FFFFFF",
+    tertiary: "#808080",
+    background: "#FFFFFF",
+    text: "#000000",
+    border: "#000000",
+  },
+  spacing: {
+    s: 8,
+    m: 16,
+    l: 24,
+    xl: 40,
+  },
+  typography: {
+    h1: {
+      fontSize: 32,
+      fontWeight: "bold",
+    },
+    h2: {
+      fontSize: 24,
+      fontWeight: "bold",
+    },
+    h3: {
+      fontSize: 18,
+      fontWeight: "bold",
+    },
+    body: {
+      fontSize: 16,
+    },
+    caption: {
+      fontSize: 14,
+      color: "#808080",
+    },
+  },
+} as const;
+
+export type TypographyVariant = keyof typeof theme.typography;
