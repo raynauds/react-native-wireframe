@@ -6,6 +6,12 @@ This file contains project-specific instructions for me, Gemini.
 
 This project is a UI library made of components ready to be copy-pasted and inteded to be used to create wireframes.
 
+## Development process
+
+If you need to know what to work on, please refer to WIREFRAME_UI_KIT.md. It includes a list of all components that should be built. Update the file whenever the status of a component changes.
+
+After a component is build, double check that is fully independant. It can import the theme, anything from react-native, and anything that is included in its folder. But nothing else, not even another wireframe component.
+
 ## Code Practices
 
 ### Wireframe components
