@@ -5,9 +5,10 @@ export const theme = {
     tertiary: "#808080",
     background: "#FFFFFF",
     text: "#000000",
+    contrastText: "#FFFFFF",
     border: "#000000",
   },
-  spacing: {
+  space: {
     s: 8,
     m: 16,
     l: 24,

@@ -11,7 +11,7 @@ type StoryProps = {
 export const Story = ({ title, children }: StoryProps) => {
   return (
     <View style={styles.root}>
-      <WText variant="h1">{title}</WText>
+      <WText variant="h2">{title}</WText>
       <View style={styles.contentContainer}>{children}</View>
     </View>
   );
@@ -19,10 +19,10 @@ export const Story = ({ title, children }: StoryProps) => {
 
 const styles = StyleSheet.create({
   root: {
-    gap: theme.spacing.m,
+    gap: theme.space.m,
   },
   contentContainer: {
-    gap: theme.spacing.m,
-    paddingLeft: theme.spacing.m,
+    gap: theme.space.m,
+    paddingHorizontal: theme.space.m,
   },
 });
