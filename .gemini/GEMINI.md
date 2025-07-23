@@ -10,7 +10,11 @@ This project is a UI library made of components ready to be copy-pasted and inte
 
 If you need to know what to work on, please refer to WIREFRAME_UI_KIT.md. It includes a list of all components that should be built. Update the file whenever the status of a component changes.
 
-After a component is build, double check that is fully independant. It can import the theme, anything from react-native, and anything that is included in its folder. But nothing else, not even another wireframe component.
+After a component is build, double check that is fully independant. It can import the theme, anything from react and react-native, and anything that is included in its folder. But nothing else, not even another wireframe component. Not even `WText`.
+
+NEVER install a library. Always use react native primitives for the wireframe components.
+
+ALWAYS run the type checking command and fix any error before marking a component as done.
 
 ## Code Practices
 
