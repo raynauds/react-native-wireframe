@@ -6,15 +6,12 @@ type WTextProps = Pick<TextProps, "style" | "children"> & {
 };
 
 export const WText = ({ variant = "body", children, style }: WTextProps) => {
-  return (
-    <Text style={[styles.root, theme.typography[variant], style]}>
-      {children}
-    </Text>
-  );
+  return <Text style={[styles.root, styles[variant], style]}>{children}</Text>;
 };
 
 const styles = StyleSheet.create({
   root: {
     color: theme.colors.text,
   },
+  ...theme.typography,
 });

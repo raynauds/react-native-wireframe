@@ -44,3 +44,7 @@ All component stories should be added to _app/index.tsx_.
 ### Others
 
 Never create index.ts files for centralizing exports.
+
+## CLI
+
+- `npx tsc`: check if there is any typescript error. Always run when you're finished with a task to check that there is no error.

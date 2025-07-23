@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   root: {
     paddingHorizontal: theme.space.m,
     paddingVertical: theme.space.m,
-    borderRadius: 16,
+    borderRadius: theme.borderRadius.default,
     borderWidth: 1,
     borderColor: theme.colors.border,
   },

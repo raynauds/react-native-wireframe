@@ -14,6 +14,9 @@ export const theme = {
     l: 24,
     xl: 40,
   },
+  borderRadius: {
+    default: 12,
+  },
   typography: {
     h1: {
       fontSize: 32,
