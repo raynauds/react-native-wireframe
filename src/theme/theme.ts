@@ -21,17 +21,21 @@ export const theme = {
     h1: {
       fontSize: 32,
       fontWeight: "bold",
+      text: "#000000",
     },
     h2: {
       fontSize: 24,
       fontWeight: "bold",
+      text: "#000000",
     },
     h3: {
       fontSize: 18,
       fontWeight: "bold",
+      text: "#000000",
     },
     body: {
       fontSize: 16,
+      text: "#000000",
     },
     caption: {
       fontSize: 14,
