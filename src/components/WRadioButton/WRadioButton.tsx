@@ -1,5 +1,6 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import { theme } from "../../theme/theme";
+import { WText } from "../WText/WText";
 
 type WRadioButtonProps = {
   label?: string;
@@ -21,7 +22,7 @@ export const WRadioButton = ({
       <View style={[styles.radio, isSelected && styles.selected]}>
         {isSelected && <View style={styles.innerRadio} />}
       </View>
-      {label && <Text style={styles.label}>{label}</Text>}
+      {label && <WText>{label}</WText>}
     </Pressable>
   );
 };
@@ -81,8 +82,5 @@ const styles = StyleSheet.create({
   },
   groupContainer: {
     gap: theme.space.m,
-  },
-  label: {
-    ...theme.typography.body,
   },
 });

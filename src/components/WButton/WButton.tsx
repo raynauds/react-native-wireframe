@@ -1,10 +1,10 @@
 import {
   StyleSheet,
-  Text,
   TouchableOpacity,
   TouchableOpacityProps,
 } from "react-native";
 import { theme } from "../../theme/theme";
+import { WText } from "../WText/WText";
 
 type WButtonProps = Pick<TouchableOpacityProps, "style" | "onPress"> & {
   title: string;
@@ -29,9 +29,9 @@ export const WButton = ({
       ]}
       activeOpacity={0.7}
     >
-      <Text style={[styles.text, variant === "filled" && styles.textFilled]}>
+      <WText style={[styles.text, variant === "filled" && styles.textFilled]}>
         {title}
-      </Text>
+      </WText>
     </TouchableOpacity>
   );
 };
@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     borderWidth: 0,
   },
   text: {
-    ...theme.typography.body,
     color: theme.colors.text,
     textAlign: "center",
   },

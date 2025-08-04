@@ -2,7 +2,6 @@ import {
   Image,
   StyleProp,
   StyleSheet,
-  Text,
   TextInput,
   TextInputProps,
   TextStyle,
@@ -10,6 +9,7 @@ import {
   ViewStyle,
 } from "react-native";
 import { theme } from "../../theme/theme";
+import { WText } from "../WText/WText";
 
 type WTextInputProps = Pick<
   TextInputProps,
@@ -32,7 +32,7 @@ export const WTextInput = ({
 }: WTextInputProps) => {
   return (
     <View style={[styles.root, containerStyle]}>
-      {label && <Text style={styles.label}>{label}</Text>}
+      {label && <WText>{label}</WText>}
       <View style={styles.inputContainer}>
         {iconLeft && (
           <Image style={styles.icon} source={require("./icon.png")} />
@@ -53,9 +53,6 @@ export const WTextInput = ({
 const styles = StyleSheet.create({
   root: {
     gap: theme.space.s,
-  },
-  label: {
-    ...theme.typography.body,
   },
   inputContainer: {
     flexDirection: "row",

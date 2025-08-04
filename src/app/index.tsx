@@ -1,7 +1,6 @@
 import { ScrollView, StyleSheet } from "react-native";
 import { WButtonStories } from "../components/WButton/WButton.stories";
 import { WCheckboxStories } from "../components/WCheckbox/WCheckbox.stories";
-import { WImageStories } from "../components/WImage/WImage.stories";
 import { WRadioButtonStories } from "../components/WRadioButton/WRadioButton.stories";
 import { WSwitchStories } from "../components/WSwitch/WSwitch.stories";
 import { WTextStories } from "../components/WText/WText.stories";
@@ -14,7 +13,6 @@ export default function Index() {
       <WTextStories />
       <WButtonStories />
       <WTextInputStories />
-      <WImageStories />
       <WSwitchStories />
       <WCheckboxStories />
       <WRadioButtonStories />

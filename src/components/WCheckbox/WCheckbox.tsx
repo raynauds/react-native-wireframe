@@ -1,5 +1,6 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import { theme } from "../../theme/theme";
+import { WText } from "../WText/WText";
 
 type WCheckboxProps = {
   label?: string;
@@ -13,7 +14,7 @@ export const WCheckbox = ({ label, value, onChange }: WCheckboxProps) => {
       <View style={[styles.checkbox, value && styles.checked]}>
         {value && <View style={styles.innerCheck} />}
       </View>
-      {label && <Text style={styles.label}>{label}</Text>}
+      {label && <WText>{label}</WText>}
     </Pressable>
   );
 };
@@ -41,8 +42,5 @@ const styles = StyleSheet.create({
     width: 12,
     height: 12,
     backgroundColor: theme.colors.background,
-  },
-  label: {
-    ...theme.typography.body,
   },
 });

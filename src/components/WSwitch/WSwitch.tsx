@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { StyleSheet, Switch, SwitchProps, Text, View } from "react-native";
+import { StyleSheet, Switch, SwitchProps, View } from "react-native";
 import { theme } from "../../theme/theme";
+import { WText } from "../WText/WText";
 
 type WSwitchProps = Pick<SwitchProps, "style" | "disabled"> & {
   label?: string;
@@ -13,9 +14,9 @@ export const WSwitch = ({ label, disabled }: WSwitchProps) => {
   return (
     <View style={styles.root}>
       {label && (
-        <Text style={[styles.label, disabled && styles.labelDisabled]}>
+        <WText style={[styles.label, disabled && styles.labelDisabled]}>
           {label}
-        </Text>
+        </WText>
       )}
       <Switch
         trackColor={{
@@ -24,6 +25,7 @@ export const WSwitch = ({ label, disabled }: WSwitchProps) => {
         thumbColor={theme.colors.background}
         onValueChange={toggleSwitch}
         value={isEnabled}
+        disabled={disabled}
       />
     </View>
   );
