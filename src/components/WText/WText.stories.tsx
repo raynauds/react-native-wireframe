@@ -3,12 +3,18 @@ import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
 import { WText } from "./WText";
 
 const meta = {
-  title: "Components/WText",
+  title: "WText",
   component: WText,
   decorators: DefaultStoriesDecorator,
   args: {
     variant: "body",
     children: "Text",
+  },
+  argTypes: {
+    variant: {
+      control: "radio",
+      options: ["h1", "h2", "h3", "body", "caption"],
+    },
   },
 } satisfies Meta<typeof WText>;
 
@@ -16,37 +22,4 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Header1: Story = {
-  args: {
-    variant: "h1",
-    children: "Header 1 (h1)",
-  },
-};
-
-export const Header2: Story = {
-  args: {
-    variant: "h2",
-    children: "Header 2 (h2)",
-  },
-};
-
-export const Header3: Story = {
-  args: {
-    variant: "h3",
-    children: "Header 3 (h3)",
-  },
-};
-
-export const Body: Story = {
-  args: {
-    variant: "body",
-    children: "Body",
-  },
-};
-
-export const Caption: Story = {
-  args: {
-    variant: "caption",
-    children: "Caption",
-  },
-};
+export const Default: Story = {};

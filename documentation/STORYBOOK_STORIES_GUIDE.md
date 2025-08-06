@@ -55,7 +55,7 @@ import { YourComponent } from "./YourComponent";
 
 // The metadata configuration for the component's stories
 const meta = {
-  title: "Components/YourComponent",
+  title: "YourComponent",
   component: YourComponent,
   decorators: [
     // Optional: A decorator to wrap the story in a View with some styles
@@ -68,6 +68,10 @@ const meta = {
   args: {
     // Default arguments for all stories
     // e.g., onPress: () => console.log('Button pressed'),
+  },
+  argTypes: {
+    // Arguments that should have a specific control
+    // e.g. variant: { control: "radio", options: ["filled", "outlined", "text"] }
   },
 } satisfies Meta<typeof YourComponent>;
 

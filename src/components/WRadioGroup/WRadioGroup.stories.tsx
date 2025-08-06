@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "storybook/internal/test";
 import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
 import { WRadioGroup } from "./WRadioGroup";
 
 const meta = {
-  title: "Components/WRadioGroup",
+  title: "WRadioGroup",
   component: WRadioGroup,
   decorators: DefaultStoriesDecorator,
   args: {
@@ -13,7 +14,7 @@ const meta = {
       { label: "option 2", value: "2" },
       { label: "option 3", value: "3" },
     ],
-    onChange: () => {},
+    onChange: fn(),
   },
 } satisfies Meta<typeof WRadioGroup>;
 
