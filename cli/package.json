@@ -1,0 +1,15 @@
+{
+  "name": "create-react-native-wireframe",
+  "version": "0.1.0",
+  "description": "A CLI to add wireframe components to your React Native project.",
+  "main": "index.js",
+  "bin": {
+    "react-native-wireframe": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  }
+}
