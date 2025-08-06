@@ -1,17 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { View } from "react-native";
+import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
 import { WCheckbox } from "./WCheckbox";
 
 const meta = {
   title: "Components/WCheckbox",
   component: WCheckbox,
-  decorators: [
-    (Story) => (
-      <View style={{ padding: 16, gap: 16 }}>
-        <Story />
-      </View>
-    ),
-  ],
+  decorators: DefaultStoriesDecorator,
   args: {
     value: false,
     onChange: () => {},

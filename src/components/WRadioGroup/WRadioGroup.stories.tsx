@@ -1,17 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { View } from "react-native";
+import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
 import { WRadioGroup } from "./WRadioGroup";
 
 const meta = {
   title: "Components/WRadioGroup",
   component: WRadioGroup,
-  decorators: [
-    (Story) => (
-      <View style={{ padding: 16, gap: 16 }}>
-        <Story />
-      </View>
-    ),
-  ],
+  decorators: DefaultStoriesDecorator,
   args: {
     value: "1",
     options: [

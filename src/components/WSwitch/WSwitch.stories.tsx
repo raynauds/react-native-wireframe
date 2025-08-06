@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { View } from "react-native";
+import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
 import { WSwitch } from "./WSwitch";
 
 const meta = {
   title: "Components/WSwitch",
   component: WSwitch,
-  decorators: [
-    (Story) => (
-      <View style={{ padding: 16, gap: 16 }}>
-        <Story />
-      </View>
-    ),
-  ],
+  decorators: DefaultStoriesDecorator,
+  args: {
+    value: false,
+    label: undefined,
+    onChange: () => {},
+    disabled: false,
+  },
 } satisfies Meta<typeof WSwitch>;
 
 export default meta;

@@ -1,16 +1,14 @@
-import { useState } from "react";
 import { StyleSheet, Switch, SwitchProps, View } from "react-native";
 import { theme } from "../../theme/theme";
 import { WText } from "../WText/WText";
 
 type WSwitchProps = Pick<SwitchProps, "style" | "disabled"> & {
+  value: boolean;
+  onChange: (newValue: boolean) => void;
   label?: string;
 };
 
-export const WSwitch = ({ label, disabled }: WSwitchProps) => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
-
+export const WSwitch = ({ value, onChange, label, disabled }: WSwitchProps) => {
   return (
     <View style={styles.root}>
       {label && (
@@ -23,8 +21,8 @@ export const WSwitch = ({ label, disabled }: WSwitchProps) => {
           true: theme.colors.primary,
         }}
         thumbColor={theme.colors.background}
-        onValueChange={toggleSwitch}
-        value={isEnabled}
+        onValueChange={onChange}
+        value={value}
         disabled={disabled}
       />
     </View>

@@ -1,17 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { View } from "react-native";
+import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
 import { WText } from "./WText";
 
 const meta = {
   title: "Components/WText",
   component: WText,
-  decorators: [
-    (Story) => (
-      <View style={{ padding: 16, gap: 16 }}>
-        <Story />
-      </View>
-    ),
-  ],
+  decorators: DefaultStoriesDecorator,
+  args: {
+    variant: "body",
+    children: "Text",
+  },
 } satisfies Meta<typeof WText>;
 
 export default meta;
