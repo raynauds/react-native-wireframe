@@ -1,15 +1,37 @@
-import { useState } from "react";
-import { Story } from "../_internal/Story";
+import type { Meta, StoryObj } from "@storybook/react";
+import { View } from "react-native";
 import { WCheckbox } from "./WCheckbox";
 
-export const WCheckboxStories = () => {
-  const [isCheck1, setIsChecked1] = useState(false);
-  const [isCheck2, setIsChecked2] = useState(false);
+const meta = {
+  title: "Components/WCheckbox",
+  component: WCheckbox,
+  decorators: [
+    (Story) => (
+      <View style={{ padding: 16, gap: 16 }}>
+        <Story />
+      </View>
+    ),
+  ],
+  args: {
+    value: false,
+    onChange: () => {},
+  },
+} satisfies Meta<typeof WCheckbox>;
 
-  return (
-    <Story title="WCheckbox">
-      <WCheckbox value={isCheck1} onChange={setIsChecked1} />
-      <WCheckbox label="With label" value={isCheck2} onChange={setIsChecked2} />
-    </Story>
-  );
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {},
+};
+
+export const Checked: Story = {
+  args: {
+    value: true,
+  },
+};
+
+export const WithLabel: Story = {
+  args: { label: "With label" },
 };

@@ -31,68 +31,68 @@ To add a new component, please follow these steps:
 
 ## Component Status Legend
 
--   `⚪️` To Do
--   `🟡` In Progress
--   `🟢` Done
+- `⚪️` To Do
+- `🟡` In Progress
+- `🟢` Done
 
 ## Component Roadmap
 
 ### Core Elements
 
-| Component | Status | Description |
-| :--- | :---: | :--- |
-| `WText` | `🟢` | Displays text with different typography styles. |
-| `WButton` | `🟢` | A standard pressable button. |
-| `WImage` | `🟢` | A generic image component. |
+| Component | Status | Description                                     |
+| :-------- | :----: | :---------------------------------------------- |
+| `WText`   |  `🟢`  | Displays text with different typography styles. |
+| `WButton` |  `🟢`  | A standard pressable button.                    |
+| `WImage`  | `⚪️`  | A generic image component.                      |
 
 ### Forms & Inputs
 
-| Component | Status | Description |
-| :--- | :---: | :--- |
-| `WTextInput` | `🟢` | A text input field with optional label and icons. |
-| `WSwitch` | `🟢` | A simple boolean toggle switch. |
-| `WCheckbox` | `🟢` | A standard checkbox component. |
-| `WRadioButton` | `🟢` | A radio button, typically used in a group. |
-| `WSlider` | `⚪️` | A slider for selecting a value from a range. |
-| `WPicker` | `⚪️` | A dropdown/picker for selecting an item from a list. |
-| `WDatePicker` | `⚪️` | A component to select a date. |
+| Component      | Status | Description                                          |
+| :------------- | :----: | :--------------------------------------------------- |
+| `WTextInput`   |  `🟢`  | A text input field with optional label and icons.    |
+| `WSwitch`      |  `🟢`  | A simple boolean toggle switch.                      |
+| `WCheckbox`    |  `🟢`  | A standard checkbox component.                       |
+| `WRadioButton` |  `🟢`  | A radio button, typically used in a group.           |
+| `WSlider`      | `⚪️`  | A slider for selecting a value from a range.         |
+| `WPicker`      | `⚪️`  | A dropdown/picker for selecting an item from a list. |
+| `WDatePicker`  | `⚪️`  | A component to select a date.                        |
 
 ### Layout & Structure
 
-| Component | Status | Description |
-| :--- | :---: | :--- |
-| `WCard` | `⚪️` | A styled container to group related content. |
-| `WView` | `⚪️` | A basic container component, similar to `View`. |
-| `WHeader` | `⚪️` | A screen header with title and optional actions. |
-| `WFooter` | `⚪️` | A screen footer, often used for navigation. |
-| `WSpacer` | `⚪️` | A flexible space component for layout. |
-| `WDivider` | `⚪️` | A horizontal or vertical line to separate content. |
+| Component  | Status | Description                                        |
+| :--------- | :----: | :------------------------------------------------- |
+| `WCard`    | `⚪️`  | A styled container to group related content.       |
+| `WView`    | `⚪️`  | A basic container component, similar to `View`.    |
+| `WHeader`  | `⚪️`  | A screen header with title and optional actions.   |
+| `WFooter`  | `⚪️`  | A screen footer, often used for navigation.        |
+| `WSpacer`  | `⚪️`  | A flexible space component for layout.             |
+| `WDivider` | `⚪️`  | A horizontal or vertical line to separate content. |
 
 ### Data Display
 
-| Component | Status | Description |
-| :--- | :---: | :--- |
-| `WList` | `⚪️` | A component to render a list of items. |
-| `WListItem` | `⚪️` | A single item for use within a `WList`. |
-| `WAvatar` | `⚪️` | A circular image for user profiles. |
-| `WBadge` | `⚪️` | A small badge for notifications or status indicators. |
-| `WProgressBar` | `⚪️` | A bar to indicate the progress of an operation. |
-| `WSpinner` | `⚪️` | An activity indicator for loading states. |
+| Component      | Status | Description                                           |
+| :------------- | :----: | :---------------------------------------------------- |
+| `WList`        | `⚪️`  | A component to render a list of items.                |
+| `WListItem`    | `⚪️`  | A single item for use within a `WList`.               |
+| `WAvatar`      | `⚪️`  | A circular image for user profiles.                   |
+| `WBadge`       | `⚪️`  | A small badge for notifications or status indicators. |
+| `WProgressBar` | `⚪️`  | A bar to indicate the progress of an operation.       |
+| `WSpinner`     | `⚪️`  | An activity indicator for loading states.             |
 
 ### Navigation & Overlays
 
-| Component | Status | Description |
-| :--- | :---: | :--- |
-| `WTabs` | `⚪️` | A tab bar for switching between views. |
-| `WModal` | `⚪️` | A modal dialog that overlays the screen. |
-| `WToast` | `⚪️` | A temporary, non-intrusive notification message. |
-| `WTooltip` | `⚪️` | A small pop-up that displays information on hover/press. |
-| `WAccordion` | `⚪️` | A collapsible section of content. |
+| Component    | Status | Description                                              |
+| :----------- | :----: | :------------------------------------------------------- |
+| `WTabs`      | `⚪️`  | A tab bar for switching between views.                   |
+| `WModal`     | `⚪️`  | A modal dialog that overlays the screen.                 |
+| `WToast`     | `⚪️`  | A temporary, non-intrusive notification message.         |
+| `WTooltip`   | `⚪️`  | A small pop-up that displays information on hover/press. |
+| `WAccordion` | `⚪️`  | A collapsible section of content.                        |
 
 ### Specialized Components
 
-| Component | Status | Description |
-| :--- | :---: | :--- |
-| `WMap` | `⚪️` | A placeholder for a map view. |
-| `WChart` | `⚪️` | A placeholder for a chart or graph. |
-| `WCalendar` | `⚪️` | A basic calendar view for displaying dates. |
+| Component   | Status | Description                                 |
+| :---------- | :----: | :------------------------------------------ |
+| `WMap`      | `⚪️`  | A placeholder for a map view.               |
+| `WChart`    | `⚪️`  | A placeholder for a chart or graph.         |
+| `WCalendar` | `⚪️`  | A basic calendar view for displaying dates. |

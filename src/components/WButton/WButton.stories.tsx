@@ -1,12 +1,40 @@
-import { Story } from "../_internal/Story";
-import { WButton } from "./WButton";
+import type { Meta, StoryObj } from '@storybook/react';
+import { WButton } from './WButton';
+import { View } from 'react-native';
 
-export const WButtonStories = () => {
-  return (
-    <Story title="WButton">
-      <WButton title="Filled" variant="filled" />
-      <WButton title="Outlined" variant="outlined" />
-      <WButton title="Text" variant="text" />
-    </Story>
-  );
+const meta = {
+  title: 'Components/WButton',
+  component: WButton,
+  decorators: [
+    (Story) => (
+      <View style={{ padding: 16, gap: 16 }}>
+        <Story />
+      </View>
+    ),
+  ],
+} satisfies Meta<typeof WButton>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Filled: Story = {
+  args: {
+    title: 'Filled',
+    variant: 'filled',
+  },
+};
+
+export const Outlined: Story = {
+  args: {
+    title: 'Outlined',
+    variant: 'outlined',
+  },
+};
+
+export const Text: Story = {
+  args: {
+    title: 'Text',
+    variant: 'text',
+  },
 };

@@ -36,20 +36,7 @@ const styles = StyleSheet.create({ ... });
 
 ### Stories
 
-Every wireframe component should be in a folder of the same name, and should have a corresponding **.stories.tsx\* file showcasing its implementation. **.stories.tsx\* should use the `Story` component and show all variations of the component, similar to the following:
-
-```typescript
-export const WComponentStories = () => {
-  return (
-    <Story title="WComponent">
-      <WComponent variant="foo">WComponent foo</WText>
-      <WComponent variant="bar">WComponent bar</WText>
-    </Story>
-  );
-};
-```
-
-All component stories should be added to _app/index.tsx_.
+For a comprehensive guide on how to create stories, please refer to the STORYBOOK_STORIES_GUIDE.md file.
 
 ### Others
 
