@@ -1,14 +1,25 @@
-import { Story } from "../_internal/Story";
+import type { Meta, StoryObj } from "@storybook/react";
+import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
 import { WText } from "./WText";
 
-export const WTextStories = () => {
-  return (
-    <Story title="WText">
-      <WText variant="h1">Header 1 (h1)</WText>
-      <WText variant="h2">Header 2 (h2)</WText>
-      <WText variant="h3">Header 3 (h3)</WText>
-      <WText variant="body">Body</WText>
-      <WText variant="caption">Caption</WText>
-    </Story>
-  );
-};
+const meta = {
+  title: "WText",
+  component: WText,
+  decorators: DefaultStoriesDecorator,
+  args: {
+    variant: "body",
+    children: "Text",
+  },
+  argTypes: {
+    variant: {
+      control: "radio",
+      options: ["h1", "h2", "h3", "body", "caption"],
+    },
+  },
+} satisfies Meta<typeof WText>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

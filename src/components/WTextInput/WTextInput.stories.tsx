@@ -1,14 +1,22 @@
-import { Story } from "../_internal/Story";
+import type { Meta, StoryObj } from "@storybook/react";
+import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
 import { WTextInput } from "./WTextInput";
 
-export const WTextInputStories = () => {
-  return (
-    <Story title="WTextInput">
-      <WTextInput placeholder="Placeholder" />
-      <WTextInput label="Label" placeholder="Placeholder" />
-      <WTextInput iconLeft placeholder="Icon left" />
-      <WTextInput iconRight placeholder="Icon right" />
-      <WTextInput iconLeft iconRight placeholder="Icon left and right" />
-    </Story>
-  );
-};
+const meta = {
+  title: "WTextInput",
+  component: WTextInput,
+  decorators: DefaultStoriesDecorator,
+  args: {
+    placeholder: "Placeholder",
+    label: "Label",
+    iconLeft: false,
+    iconRight: false,
+    onChangeText: () => alert("Text changed!"),
+  },
+} satisfies Meta<typeof WTextInput>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

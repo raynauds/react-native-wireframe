@@ -1,12 +1,21 @@
-import { Story } from "../_internal/Story";
+import type { Meta, StoryObj } from "@storybook/react";
+import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
 import { WSwitch } from "./WSwitch";
 
-export const WSwitchStories = () => {
-  return (
-    <Story title="WSwitch">
-      <WSwitch />
-      <WSwitch label="With label" />
-      <WSwitch label="Disabled" disabled />
-    </Story>
-  );
-};
+const meta = {
+  title: "WSwitch",
+  component: WSwitch,
+  decorators: DefaultStoriesDecorator,
+  args: {
+    value: false,
+    label: "Switch",
+    onChange: () => alert("Switch changed!"),
+    disabled: false,
+  },
+} satisfies Meta<typeof WSwitch>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

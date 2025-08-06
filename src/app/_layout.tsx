@@ -6,7 +6,8 @@ export default function RootLayout() {
       <Stack.Screen
         name="index"
         options={{
-          headerTitle: "Wireframe Components",
+          headerTitle: "Storybook",
+          headerShown: false,
         }}
       />
     </Stack>

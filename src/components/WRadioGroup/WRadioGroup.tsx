@@ -5,18 +5,16 @@ import { WText } from "../WText/WText";
 type WRadioButtonProps = {
   label?: string;
   value: string;
-  selectedValue?: string;
+  isSelected?: boolean;
   onValueChange?: (value: string) => void;
 };
 
-export const WRadioButton = ({
+const WRadioButton = ({
   label,
   value,
-  selectedValue,
+  isSelected,
   onValueChange,
 }: WRadioButtonProps) => {
-  const isSelected = value === selectedValue;
-
   return (
     <Pressable style={styles.root} onPress={() => onValueChange?.(value)}>
       <View style={[styles.radio, isSelected && styles.selected]}>
@@ -27,30 +25,29 @@ export const WRadioButton = ({
   );
 };
 
-type WRadioGroupProps = {
-  children: React.ReactNode;
+type WRadioGroupOptions = {
+  label?: string;
   value: string;
-  onChange: (newValue: string) => void;
 };
 
-export const WRadioGroup = ({
-  children,
-  value,
-  onChange,
-}: WRadioGroupProps) => {
+type WRadioGroupProps = {
+  value: string;
+  onChange: (newValue: string) => void;
+  options: WRadioGroupOptions[];
+};
+
+export const WRadioGroup = ({ value, onChange, options }: WRadioGroupProps) => {
   return (
     <View style={styles.groupContainer}>
-      {Array.isArray(children) &&
-        children.map((child, index) => {
-          return (
-            <WRadioButton
-              key={index}
-              {...child.props}
-              selectedValue={value}
-              onValueChange={onChange}
-            />
-          );
-        })}
+      {options.map((option) => (
+        <WRadioButton
+          key={option.value}
+          value={value}
+          label={option.label}
+          isSelected={option.value === value}
+          onValueChange={onChange}
+        />
+      ))}
     </View>
   );
 };

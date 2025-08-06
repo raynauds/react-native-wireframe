@@ -1,12 +1,27 @@
-import { Story } from "../_internal/Story";
+import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "storybook/test";
+import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
 import { WButton } from "./WButton";
 
-export const WButtonStories = () => {
-  return (
-    <Story title="WButton">
-      <WButton title="Filled" variant="filled" />
-      <WButton title="Outlined" variant="outlined" />
-      <WButton title="Text" variant="text" />
-    </Story>
-  );
-};
+const meta = {
+  title: "WButton",
+  component: WButton,
+  decorators: DefaultStoriesDecorator,
+  args: {
+    title: "Button",
+    variant: "filled",
+    onPress: fn(),
+  },
+  argTypes: {
+    variant: {
+      control: "radio",
+      options: ["filled", "outlined", "text"],
+    },
+  },
+} satisfies Meta<typeof WButton>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

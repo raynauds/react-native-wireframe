@@ -1,18 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/internal/test";
 import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
-import { WCheckbox } from "./WCheckbox";
+import { WRadioGroup } from "./WRadioGroup";
 
 const meta = {
-  title: "WCheckbox",
-  component: WCheckbox,
+  title: "WRadioGroup",
+  component: WRadioGroup,
   decorators: DefaultStoriesDecorator,
   args: {
-    value: false,
+    value: "1",
+    options: [
+      { label: "option 1", value: "1" },
+      { label: "option 2", value: "2" },
+      { label: "option 3", value: "3" },
+    ],
     onChange: fn(),
-    label: "Checkbox",
   },
-} satisfies Meta<typeof WCheckbox>;
+} satisfies Meta<typeof WRadioGroup>;
 
 export default meta;
 
