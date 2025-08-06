@@ -6,16 +6,19 @@ import {
 import { theme } from "../../theme/theme";
 import { WText } from "../WText/WText";
 
-type WButtonProps = Pick<TouchableOpacityProps, "style" | "onPress"> & {
+type WButtonProps = Pick<
+  TouchableOpacityProps,
+  "style" | "onPress" | "accessibilityHint" | "accessibilityLabel"
+> & {
   title: string;
   variant?: "filled" | "outlined" | "text";
 };
-
 export const WButton = ({
   title,
   variant = "filled",
   style,
   onPress,
+  ...props
 }: WButtonProps) => {
   return (
     <TouchableOpacity
@@ -28,6 +31,9 @@ export const WButton = ({
         style,
       ]}
       activeOpacity={0.7}
+      accessibilityRole="button"
+      accessibilityLabel={title}
+      {...props}
     >
       <WText style={[styles.text, variant === "filled" && styles.textFilled]}>
         {title}

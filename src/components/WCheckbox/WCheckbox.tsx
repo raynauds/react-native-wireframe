@@ -1,16 +1,40 @@
-import { Pressable, StyleSheet, View } from "react-native";
+import {
+  Pressable,
+  PressableProps,
+  StyleProp,
+  StyleSheet,
+  View,
+  ViewStyle,
+} from "react-native";
 import { theme } from "../../theme/theme";
 import { WText } from "../WText/WText";
 
-type WCheckboxProps = {
+type WCheckboxProps = Pick<
+  PressableProps,
+  "style" | "accessibilityHint" | "accessibilityLabel"
+> & {
   label?: string;
   value: boolean;
   onChange: (newValue: boolean) => void;
+  style?: StyleProp<ViewStyle>;
 };
 
-export const WCheckbox = ({ label, value, onChange }: WCheckboxProps) => {
+export const WCheckbox = ({
+  label,
+  value,
+  onChange,
+  style,
+  ...props
+}: WCheckboxProps) => {
   return (
-    <Pressable style={styles.root} onPress={() => onChange?.(!value)}>
+    <Pressable
+      style={[styles.root, style]}
+      onPress={() => onChange?.(!value)}
+      accessibilityRole="checkbox"
+      accessibilityState={{ checked: value }}
+      accessibilityLabel={label}
+      {...props}
+    >
       <View style={[styles.checkbox, value && styles.checked]}>
         {value && <View style={styles.innerCheck} />}
       </View>

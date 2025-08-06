@@ -13,7 +13,11 @@ import { WText } from "../WText/WText";
 
 type WTextInputProps = Pick<
   TextInputProps,
-  "placeholder" | "value" | "onChangeText"
+  | "placeholder"
+  | "value"
+  | "onChangeText"
+  | "accessibilityHint"
+  | "accessibilityLabel"
 > & {
   containerStyle?: StyleProp<ViewStyle>;
   inputStyle?: StyleProp<TextStyle>;
@@ -35,15 +39,24 @@ export const WTextInput = ({
       {label && <WText>{label}</WText>}
       <View style={styles.inputContainer}>
         {iconLeft && (
-          <Image style={styles.icon} source={require("./icon.png")} />
+          <Image
+            style={styles.icon}
+            source={require("./icon.png")}
+            importantForAccessibility="no"
+          />
         )}
         <TextInput
           style={[styles.input, inputStyle]}
           placeholderTextColor={theme.typography.caption.color}
+          accessibilityLabel={label}
           {...props}
         />
         {iconRight && (
-          <Image style={styles.icon} source={require("./icon.png")} />
+          <Image
+            style={styles.icon}
+            source={require("./icon.png")}
+            importantForAccessibility="no"
+          />
         )}
       </View>
     </View>
