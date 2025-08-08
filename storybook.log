@@ -1,0 +1,7 @@
+
+> react-native-wireframe-monorepo@1.0.0 storybook
+> npm run storybook -w react-native-wireframe-storybook
+
+
+> react-native-wireframe-storybook@1.0.0 storybook
+> storybook dev -p 6006

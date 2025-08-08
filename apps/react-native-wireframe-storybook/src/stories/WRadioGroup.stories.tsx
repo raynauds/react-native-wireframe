@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/internal/test";
-import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
-import { WRadioGroup } from "./WRadioGroup";
+import { WRadioGroup } from "react-native-wireframe";
+import { DefaultStoriesDecorator } from "./_internal/DefaultStoriesDecorator";
 
 const meta = {
   title: "WRadioGroup",

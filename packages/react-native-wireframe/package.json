@@ -1,0 +1,30 @@
+{
+  "name": "react-native-wireframe",
+  "version": "1.0.0",
+  "description": "A pure React Native components library.",
+  "main": "src/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^14.1.0",
+    "expo-blur": "~14.1.5",
+    "expo-haptics": "~14.1.4",
+    "expo-image": "~2.4.0",
+    "expo-symbols": "~0.4.5",
+    "react": "19.0.0",
+    "react-native": "0.79.5"
+  },
+  "peerDependencies": {
+    "@react-native-community/datetimepicker": "*",
+    "@react-native-community/slider": "*",
+    "react-native-svg": "*"
+  },
+  "devDependencies": {
+    "@types/react": "~19.0.10",
+    "typescript": "~5.8.3"
+  }
+}
