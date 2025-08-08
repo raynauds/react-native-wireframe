@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/internal/test";
-import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
-import { WCheckbox } from "./WCheckbox";
+import { WCheckbox } from "react-native-wireframe";
+import { DefaultStoriesDecorator } from "./_internal/DefaultStoriesDecorator";
 
 const meta = {
   title: "WCheckbox",

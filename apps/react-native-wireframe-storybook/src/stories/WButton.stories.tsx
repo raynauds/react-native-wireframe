@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/test";
-import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
-import { WButton } from "./WButton";
+import { WButton } from "react-native-wireframe";
+import { DefaultStoriesDecorator } from "./_internal/DefaultStoriesDecorator";
 
 const meta = {
   title: "WButton",
