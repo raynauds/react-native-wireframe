@@ -6,7 +6,7 @@ This project aims to create a comprehensive, unstyled, and ready-to-use set of c
 
 ## Getting Started
 
-To use a component, simply copy its folder from `src/components` into your project. You can then import the component and use it in your code.
+To use a component, simply copy its folder from `packages/react-native-wireframe/src/components` into your project. You can then import the component and use it in your code.
 
 ## Principles
 
@@ -23,11 +23,10 @@ This project does not follow a strict versioning scheme. The components are desi
 
 To add a new component, please follow these steps:
 
-1.  Create a new folder for the component in `src/components`.
+1.  Create a new folder for the component in `packages/react-native-wireframe/src/components`.
 2.  Create a `WComponent.tsx` file with the component's implementation.
-3.  Create a `WComponent.stories.tsx` file with the component's stories.
-4.  Add the component's stories to `src/app/index.tsx`.
-5.  Update this file with the new component's information.
+3.  Create a `WComponent.stories.tsx` file with the component's stories in `apps/react-native-wireframe-storybook/src/stories`.
+4.  Update this file with the new component's information.
 
 ## Component Status Legend
 

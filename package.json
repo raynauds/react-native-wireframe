@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/react-native-wireframe-storybook",
+    "packages/create-react-native-wireframe",
+    "packages/react-native-wireframe"
   ],
   "scripts": {
-    "storybook": "npm run storybook -w react-native-wireframe-storybook",
+    "storybook:web": "npm run storybook -w react-native-wireframe-storybook",
+    "storybook:android": "npm run android -w react-native-wireframe-storybook",
+    "storybook:ios": "npm run ios -w react-native-wireframe-storybook",
     "cli": "npm run cli -w create-react-native-wireframe"
   },
   "devDependencies": {
