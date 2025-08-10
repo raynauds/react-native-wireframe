@@ -53,7 +53,7 @@ To add a new component, please follow these steps:
 | `WSwitch`      |  `🟢`  | A simple boolean toggle switch.                      |
 | `WCheckbox`    |  `🟢`  | A standard checkbox component.                       |
 | `WRadioButton` |  `🟢`  | A radio button, typically used in a group.           |
-| `WSlider`      | `⚪️`  | A slider for selecting a value from a range.         |
+| `WSlider`      | `🟢`  | A slider for selecting a value from a range.         |
 | `WPicker`      | `⚪️`  | A dropdown/picker for selecting an item from a list. |
 | `WDatePicker`  | `⚪️`  | A component to select a date.                        |
 
