@@ -63,7 +63,7 @@ To add a new component, please follow these steps:
 | :--------- | :----: | :------------------------------------------------- |
 | `WCard`    | `⚪️`  | A styled container to group related content.       |
 | `WHeader`  | `⚪️`  | A screen header with title and optional actions.   |
-| `WDivider` | `⚪️`  | A horizontal or vertical line to separate content. |
+| `WDivider` | `🟢`  | A horizontal or vertical line to separate content. |
 
 ### Data Display
 
