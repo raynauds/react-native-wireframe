@@ -61,7 +61,7 @@ To add a new component, please follow these steps:
 
 | Component  | Status | Description                                        |
 | :--------- | :----: | :------------------------------------------------- |
-| `WCard`    | `⚪️`  | A styled container to group related content.       |
+| `WCard`    | `🟢`  | A styled container to group related content.       |
 | `WHeader`  | `⚪️`  | A screen header with title and optional actions.   |
 | `WDivider` | `⚪️`  | A horizontal or vertical line to separate content. |
 
