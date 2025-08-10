@@ -1,6 +1,7 @@
 export * from './theme/theme';
 export * from './components/WButton';
 export * from './components/WCheckbox';
+export * from './components/WHeader';
 export * from './components/WRadioGroup';
 export * from './components/WSwitch';
 export * from './components/WText';
