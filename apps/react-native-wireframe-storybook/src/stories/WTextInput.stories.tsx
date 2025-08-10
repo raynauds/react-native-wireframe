@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { DefaultStoriesDecorator } from "../_internal/DefaultStoriesDecorator";
-import { WTextInput } from "./WTextInput";
+import { WTextInput } from "react-native-wireframe";
+import { DefaultStoriesDecorator } from "./_internal/DefaultStoriesDecorator";
 
 const meta = {
   title: "WTextInput",

@@ -1,12 +1,14 @@
 # React Native Wireframe
 
-This project is a UI library made of components ready to be copy-pasted and intended to be used to create wireframes. It provides a set of pre-built, independent React Native components designed for rapid prototyping and UI development.
+This monorepo contains the React Native Wireframe UI library, a collection of components designed for rapid prototyping and wireframing.
 
-## Features
+## Packages
 
-- **Independent Components:** Each component is designed to be self-contained, minimizing dependencies and maximizing reusability.
-- **Themable:** Components can import and utilize the project's theme for consistent styling.
-- **Storybook Integration:** Each component comes with a Storybook story for easy visualization, testing, and documentation.
+This monorepo is structured into the following packages:
+
+- **`packages/react-native-wireframe`**: The core UI library containing the wireframe components.
+- **`apps/react-native-wireframe-storybook`**: A Storybook application for showcasing and testing the components.
+- **`packages/create-react-native-wireframe`**: A CLI tool for creating new components.
 
 ## Getting Started
 
@@ -18,27 +20,18 @@ To get started with the project and view the components in Storybook:
     npm install
     ```
 
-2.  **Run Storybook Web:**
+2.  **Run Storybook:**
 
     ```bash
     npm run storybook
     ```
 
-    This will launch the Storybook server, and you can access the component showcase in your web browser.
+    This will launch the Storybook application.
 
-3.  **Run Storybook Mobile:**
+3.  **Run CLI:**
 
     ```bash
-    npm run ios
-    npm run android
+    npm run cli
     ```
 
-    This will launch the app in Expo Go, and you can access the component showcase in your mobile emulator/device.
-
-## Roadmap
-
-In the future, this project will evolve into a monorepo encompassing:
-
-- **Core Component Library:** The current set of wireframe components.
-- **CLI for Component Management:** A command-line interface to streamline component creation and management.
-- **Storybook-based Showcase Application:** A dedicated application for showcasing and interacting with the components.
+    This will run the CLI tool for creating new components.

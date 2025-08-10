@@ -3,27 +3,25 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-const SOURCE_DIRECTORY = path.resolve(__dirname, '../src');
+const wireframePackagePath = path.dirname(
+  require.resolve('react-native-wireframe/package.json')
+);
+const SOURCE_DIRECTORY = path.join(wireframePackagePath, 'src');
 const DESTINATION_DIRECTORY = path.resolve(process.cwd(), 'wireframe');
 
 const SOURCE_COMPONENTS_DIRECTORY = path.join(SOURCE_DIRECTORY, 'components');
 const SOURCE_THEME_DIRECTORY = path.join(SOURCE_DIRECTORY, 'theme');
 
 const copyThemeFiles = () => {
-  const themeFileNames = fs.readdirSync(SOURCE_THEME_DIRECTORY);
-  for (const fileName of themeFileNames) {
-    const sourceFilePath = path.join(SOURCE_THEME_DIRECTORY, fileName);
-    const destinationFilePath = path.join(DESTINATION_DIRECTORY, fileName);
-    fs.copySync(sourceFilePath, destinationFilePath);
-  }
+  fs.copySync(SOURCE_THEME_DIRECTORY, path.join(DESTINATION_DIRECTORY, 'theme'));
 };
 
 const updateImportPaths = (content) => {
   let updatedContent = content;
-  // from '../../theme/theme' => from './theme'
-  updatedContent = updatedContent.replace(/from\s+['"]\.\.\/\.\.\/theme\/theme['"]/g, 'from "./theme"');
-  // from '../WComponent/WComponent' => from './WComponent'
-  updatedContent = updatedContent.replace(/from\s+['"]\.\.\/(W[a-zA-Z0-9]+)\/\1['"]/g, 'from "./$1"');
+  // from '../../theme/theme' => from './theme/theme'
+  updatedContent = updatedContent.replace(/from\s+['"]\.\.\/\.\.\/theme\/theme['"]/g, 'from "./theme/theme"');
+  // from '../WText/WText' => from './WText/WText'
+  updatedContent = updatedContent.replace(/from\s+['"]\.\.\/(W[a-zA-Z0-9]+)\/W[a-zA-Z0-9]+['"]/g, (match, p1) => `from "./${p1}/${p1}"`);
   return updatedContent;
 };
 
@@ -31,25 +29,22 @@ const copyComponentFiles = () => {
   const componentDirectoryNames = fs.readdirSync(SOURCE_COMPONENTS_DIRECTORY)
     .filter(item => {
       const itemPath = path.join(SOURCE_COMPONENTS_DIRECTORY, item);
-      return fs.statSync(itemPath).isDirectory() && item !== '_internal';
+      return fs.statSync(itemPath).isDirectory();
     });
 
   for (const componentDirectoryName of componentDirectoryNames) {
     const sourceComponentDirectory = path.join(SOURCE_COMPONENTS_DIRECTORY, componentDirectoryName);
-    const fileNames = fs.readdirSync(sourceComponentDirectory)
-      .filter(fileName => !fileName.includes('.stories.'));
+    const destinationComponentDirectory = path.join(DESTINATION_DIRECTORY, componentDirectoryName);
+    fs.copySync(sourceComponentDirectory, destinationComponentDirectory);
 
+    const fileNames = fs.readdirSync(destinationComponentDirectory);
     for (const fileName of fileNames) {
-      const sourceFilePath = path.join(sourceComponentDirectory, fileName);
-      const destinationFilePath = path.join(DESTINATION_DIRECTORY, fileName);
-
-      if (fileName.endsWith('.tsx')) {
-        const content = fs.readFileSync(sourceFilePath, 'utf8');
-        const updatedContent = updateImportPaths(content);
-        fs.writeFileSync(destinationFilePath, updatedContent, 'utf8');
-      } else {
-        fs.copySync(sourceFilePath, destinationFilePath);
-      }
+        if (fileName.endsWith('.tsx')) {
+            const filePath = path.join(destinationComponentDirectory, fileName);
+            const content = fs.readFileSync(filePath, 'utf8');
+            const updatedContent = updateImportPaths(content);
+            fs.writeFileSync(filePath, updatedContent, 'utf8');
+        }
     }
   }
 };
