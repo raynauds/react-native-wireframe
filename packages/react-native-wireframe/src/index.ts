@@ -5,3 +5,4 @@ export * from './components/WRadioGroup';
 export * from './components/WSwitch';
 export * from './components/WText';
 export * from './components/WTextInput';
+export * from './components/WImage';

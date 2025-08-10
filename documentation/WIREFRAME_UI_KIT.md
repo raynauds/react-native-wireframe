@@ -43,7 +43,7 @@ To add a new component, please follow these steps:
 | :-------- | :----: | :---------------------------------------------- |
 | `WText`   |  `🟢`  | Displays text with different typography styles. |
 | `WButton` |  `🟢`  | A standard pressable button.                    |
-| `WImage`  | `⚪️`  | A generic image component.                      |
+| `WImage`  | `🟢`  | A generic image component.                      |
 
 ### Forms & Inputs
 
