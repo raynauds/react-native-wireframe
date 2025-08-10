@@ -7,7 +7,9 @@
     "src"
   ],
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "typecheck": "npx tsc --noEmit",
+    "check": "npm run lint && npm run typecheck"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

@@ -41,7 +41,3 @@ For a comprehensive guide on how to create stories, please refer to the STORYBOO
 ### Others
 
 Never create index.ts files for centralizing exports.
-
-## CLI
-
-- `npx tsc`: check if there is any typescript error. Always run when you're finished with a task to check that there is no error.

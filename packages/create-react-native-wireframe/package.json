@@ -10,7 +10,8 @@
     "index.js"
   ],
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check": "npm run lint"
   },
   "dependencies": {
     "fs-extra": "^11.2.0",
