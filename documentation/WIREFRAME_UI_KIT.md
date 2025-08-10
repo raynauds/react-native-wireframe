@@ -70,7 +70,7 @@ To add a new component, please follow these steps:
 | Component      | Status | Description                                           |
 | :------------- | :----: | :---------------------------------------------------- |
 | `WList`        | `⚪️`  | A component to render a list of items.                |
-| `WListItem`    | `⚪️`  | A single item for use within a `WList`.               |
+| `WListItem`    | `🟢`  | A single item for use within a `WList`.               |
 | `WAvatar`      | `⚪️`  | A circular image for user profiles.                   |
 | `WBadge`       | `⚪️`  | A small badge for notifications or status indicators. |
 | `WProgressBar` | `⚪️`  | A bar to indicate the progress of an operation.       |
