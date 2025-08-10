@@ -9,6 +9,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
+    "typecheck": "npx tsc --noEmit",
+    "check": "npm run lint && npm run typecheck",
     "storybook-generate": "sb-rn-get-stories",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
