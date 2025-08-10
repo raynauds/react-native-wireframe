@@ -23,6 +23,7 @@
   "peerDependencies": {
     "@react-native-community/datetimepicker": "*",
     "@react-native-community/slider": "*",
+    "@react-native-picker/picker": "*",
     "react-native-svg": "*"
   },
   "devDependencies": {
