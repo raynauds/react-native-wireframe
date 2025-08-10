@@ -11,9 +11,10 @@ To use a component, simply copy its folder from `packages/react-native-wireframe
 ## Principles
 
 - **Simplicity**: Components should be as simple as possible, with a minimal API.
-- **Unstyled**: Components should be unstyled by default, allowing for easy customization.
-- **Independent**: Components should be independent of each other, with no shared dependencies.
+- **Unstyled**: Components should have very basic styling, similar to what is expected in a wireframe.
+- **Independent**: Components should not depend on external libraries, make them work in any react native project.
 - **Ready-to-use**: Components should be ready to be copy-pasted into any project.
+- **Consistency**: New components should follow the same conventions as existing ones. This means accepting a `style` prop for custom styling, supporting accessibility props, and maintaining a consistent approach to layout and API design. Use uniform prop names and structure to ensure components are interchangeable and predictable.
 
 ## Versioning
 
@@ -61,10 +62,7 @@ To add a new component, please follow these steps:
 | Component  | Status | Description                                        |
 | :--------- | :----: | :------------------------------------------------- |
 | `WCard`    | `⚪️`  | A styled container to group related content.       |
-| `WView`    | `⚪️`  | A basic container component, similar to `View`.    |
 | `WHeader`  | `⚪️`  | A screen header with title and optional actions.   |
-| `WFooter`  | `⚪️`  | A screen footer, often used for navigation.        |
-| `WSpacer`  | `⚪️`  | A flexible space component for layout.             |
 | `WDivider` | `⚪️`  | A horizontal or vertical line to separate content. |
 
 ### Data Display
@@ -82,7 +80,6 @@ To add a new component, please follow these steps:
 
 | Component    | Status | Description                                              |
 | :----------- | :----: | :------------------------------------------------------- |
-| `WTabs`      | `⚪️`  | A tab bar for switching between views.                   |
 | `WModal`     | `⚪️`  | A modal dialog that overlays the screen.                 |
 | `WToast`     | `⚪️`  | A temporary, non-intrusive notification message.         |
 | `WTooltip`   | `⚪️`  | A small pop-up that displays information on hover/press. |
