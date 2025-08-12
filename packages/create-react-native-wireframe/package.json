@@ -12,8 +12,7 @@
   "scripts": {
     "cli": "node index.js",
     "lint": "eslint .",
-    "check": "npm run lint",
-    "cli": "node index.js"
+    "check": "npm run lint"
   },
   "dependencies": {
     "fs-extra": "^11.2.0",
