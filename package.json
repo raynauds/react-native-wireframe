@@ -12,6 +12,7 @@
     "storybook:android": "npm run android -w react-native-wireframe-storybook",
     "storybook:ios": "npm run ios -w react-native-wireframe-storybook",
     "cli": "npm run cli -w create-react-native-wireframe",
+    "cli:build": "npm run build -w create-react-native-wireframe",
     "check": "npm run check -w create-react-native-wireframe -w react-native-wireframe -w react-native-wireframe-storybook"
   },
   "devDependencies": {
