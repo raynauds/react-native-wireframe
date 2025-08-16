@@ -1,6 +1,6 @@
 {
   "name": "react-native-wireframe-monorepo",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "apps/react-native-wireframe-storybook",
@@ -8,11 +8,15 @@
     "packages/react-native-wireframe"
   ],
   "scripts": {
+    "check": "npm run check -w create-react-native-wireframe -w react-native-wireframe -w react-native-wireframe-storybook",
     "storybook:web": "npm run storybook -w react-native-wireframe-storybook",
     "storybook:android": "npm run android -w react-native-wireframe-storybook",
     "storybook:ios": "npm run ios -w react-native-wireframe-storybook",
     "cli": "npm run cli -w create-react-native-wireframe",
-    "check": "npm run check -w create-react-native-wireframe -w react-native-wireframe -w react-native-wireframe-storybook"
+    "build:cli": "npm run build -w create-react-native-wireframe",
+    "publish:cli": "npm run build:wireframe && npm publish -w create-react-native-wireframe",
+    "build:wireframe": "npm run build -w react-native-wireframe",
+    "publish:wireframe": "npm run build:wireframe && npm publish -w react-native-wireframe"
   },
   "devDependencies": {
     "eslint": "^9.25.0",

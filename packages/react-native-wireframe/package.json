@@ -1,15 +1,19 @@
 {
   "name": "react-native-wireframe",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "A pure React Native components library.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
+    "dist",
     "src"
   ],
   "scripts": {
     "lint": "eslint .",
     "typecheck": "npx tsc --noEmit",
-    "check": "npm run lint && npm run typecheck"
+    "check": "npm run lint && npm run typecheck",
+    "copy-assets": "cd src && find . -name '*.png' -print0 | xargs -0 -I {} rsync -R {} ../dist/",
+    "build": "npx tsc && npm run copy-assets"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

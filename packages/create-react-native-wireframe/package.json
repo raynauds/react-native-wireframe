@@ -1,21 +1,27 @@
 {
   "name": "create-react-native-wireframe",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "A CLI to add wireframe components to your React Native project.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
-    "create-react-native-wireframe": "./index.js"
+    "create-react-native-wireframe": "dist/index.js"
   },
   "files": [
-    "index.js"
+    "dist/index.js"
   ],
   "scripts": {
-    "cli": "node index.js",
+    "cli": "node dist/index.js",
     "lint": "eslint .",
-    "check": "npm run lint"
+    "check": "npm run lint",
+    "build": "tsc"
   },
   "dependencies": {
     "fs-extra": "^11.2.0",
-    "react-native-wireframe": "1.0.0"
+    "react-native-wireframe": "0.0.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
   }
 }
